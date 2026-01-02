@@ -1,18 +1,148 @@
 export const gitActions = [
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
-  "heading",
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
+  {
+    title: "Heading 1",
+    method: () => {
+      console.log("Hello");
+    },
+  },
 ];
 
 // navigational links

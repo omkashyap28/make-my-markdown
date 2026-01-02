@@ -1,1 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+.ahm-monospace {
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.montserrat {
+  font-family: "Montserrat", monospace;
+  font-optical-sizing: auto;
+}
+
+@layer components {
+  .container {
+    @apply container mx-auto px-4 sm:px-6 md:px-8 lg:px-10;
+  }
+  .action-btn {
+    @apply w-full h-auto py-1 my-1 text-center rounded-md bg-cyan-600 hover:bg-cyan-700 cursor-pointer;
+  }
+  .color-theame {
+    @apply bg-gray-100 dark:bg-[#191919] text-[#191919] dark:text-gray-100;
+  }
+  .editor-theame {
+    @apply bg-gray-300 text-zinc-800 dark:bg-zinc-800 dark:text-gray-50;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.scroll-style::-webkit-scrollbar {
+  display: none;
+}
