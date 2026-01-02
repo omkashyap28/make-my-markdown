@@ -1,8 +1,10 @@
-const Button = ({ children, fun, className, ...actions }) => (
+const Button = ({ children, className, ...actions }) => (
   <button
     className={`action-btn ${className || ''}`}
     {...actions}
-    onClick={fun}>{children}</button>
+  >
+    {children}
+  </button>
 );
 
 export default Button;

@@ -148,11 +148,15 @@ export const gitActions = [
 // navigational links
 export const navLinks = [
   {
-    link: "home",
+    link: "Home",
     uri: "#",
   },
   {
-    link: "editor",
+    link: "markdown maker",
+    uri: "#",
+  },
+  {
+    link: "contribute",
     uri: "#",
   },
 ];

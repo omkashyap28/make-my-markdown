@@ -1,8 +1,14 @@
+import { Footer, Header, Wrapper } from "./components";
+import { Editor } from "./pages";
+
 const App = () => {
   return (
-    <div>
-
-    </div>
+    // <Editor />
+    <>
+      <Header />
+      <Editor />
+      <Footer />
+    </>
   )
 }
 

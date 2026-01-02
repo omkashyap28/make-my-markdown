@@ -24,7 +24,7 @@ const Header = () => {
             MakeMyMarkdown
           </h2>
           <Button
-            fun={() => setSidebarOpen(!sidebarOpen)}
+            onClick={() => setSidebarOpen(!sidebarOpen)}
             className="md:hidden bg-transparent p-2 rounded-md w-auto"
             aria-label="Toggle navigation menu"
             aria-expanded={sidebarOpen}
@@ -32,9 +32,9 @@ const Header = () => {
             <FaBars className="text-xl" aria-hidden="true" />
           </Button>
 
-          <div className="hidden relative md:flex items-center gap-3">
+          <div className="hidden relative md:flex justify-end items-center gap-3 w-full">
             {
-              navLinks.map(({ link, uri }) => (
+              navLinks?.map(({ link, uri }) => (
                 <a
                   key={link}
                   href={uri}
@@ -71,7 +71,7 @@ const Header = () => {
 
           {/* <div className={`absolute py-4 left-0 -z-89 w-full h-auto transform ease-in-out duration-300 color-theame md:hidden ${sidebarOpen ? 'top-15' : '-top-full'}`}> */}
           <div
-            className={`absolute py-4 left-0 -z-89 w-full h-auto transform ease-in-out duration-300 color-theame md:hidden ${sidebarOpen ? "top-15" : "-top-full"
+            className={`fixed py-4 left-0 -z-89 w-full h-auto transform ease-in-out duration-300 color-theame md:hidden ${sidebarOpen ? "top-15" : "-top-full"
               }`}
             role="navigation"
             aria-hidden={!sidebarOpen}
