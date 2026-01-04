@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./theme.css";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,
 body {
-  height: 100vh;
   width: 100%;
 }
 a {
@@ -13,9 +14,113 @@ a {
 }
 button {
   cursor: pointer;
+  outline: none;
+  border: none;
 }
+
+.flex-gap-1 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  color: var(--primary-text);
+  background: var(--background);
+}
+
+/* font classes */
+.ah-mono {
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .container {
   height: 100%;
   width: 100%;
+  padding-inline: var(--padding-inline);
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-block) var(--padding-inline);
+  background-color: var(--background);
+  color: var(--primary-text);
+  height: 60px;
+}
+.icons {
+  font-size: 1.7rem;
+}
+.page-links {
+  color: var(--text-primary);
+}
+.theme-toggle-btn {
+  background-color: transparent;
+  color: var(--primary-text);
+}
+.container-flex {
+  width: 100%;
+  /* min-height: calc(100vh - 60px); */
+  height: calc(100vh - 110px);
+  display: flex;
+  gap: 0.4rem;
+  /* overflow: hidden; */
+}
+.container-editor {
+  height: 100%;
+  width: 50%;
+}
+.markup-container {
+  width: 50%;
+  height: 100%;
+}
+.container-markup {
+  height: 100%;
+  width: 100%;
+  background-color: var(--editor-background);
+  color: var(--text-primary);
+  overflow-y: scroll;
+}
+.container-markup::-webkit-scrollbar {
+  width: 0.9em;
+  background: transparent;
+  border-left: 1px solid #80808041;
+}
+.container-markup::-webkit-scrollbar-thumb {
+  background: #4a4b4d;
+}
+.container-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  background: #151b23;
+}
+.container-header-button {
+  height: 100%;
+  width: auto;
+  padding-inline: 10px;
+  letter-spacing: 1px;
+  background-color: var(--editor-background);
+  color: var(--text-primary);
+}
+.copy-button {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  padding: 1rem;
+}
