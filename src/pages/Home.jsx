@@ -1,31 +1,14 @@
-import { Editor } from "@monaco-editor/react";
-import { useEffect, useState } from "react";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { useState } from "react";
 import Button from '../components/Button';
 import { FaCopy } from "react-icons/fa6";
-import { copyMarkupToClipboard, editorConfig, handleEditorWillMount } from './utils';
-import { remark } from "remark";
-import html from "remark-html";
+import { copyMarkupToClipboard } from '../utils';
+import { HtmlEditor, MarkdownEditor, MarkdownPreview } from '../components'
+import { useMarkdownStore } from "../store";
 
 
 const Home = () => {
-
-  const [markdownValue, setMarkdownValue] = useState("");
+  const markdownValue = useMarkdownStore(state => state.markdownValue);
   const [activeTab, setActiveTab] = useState("preview");
-  const [htmlValue, setHtmlValue] = useState("");
-
-  useEffect(() => {
-    const convertToHtml = async () => {
-      const result = await remark()
-        .use(html)
-        .process(markdownValue);
-
-      setHtmlValue(result.toString());
-    };
-
-    convertToHtml();
-  }, [markdownValue]);
 
   return (
     <section className="container montserrat">
@@ -41,14 +24,7 @@ const Home = () => {
               <FaCopy style={{ fontSize: "1.2rem" }} />
             </Button>
           </div>
-          <Editor
-            language="markdown"
-            theme="my-custom-theme"
-            options={editorConfig}
-            value={markdownValue}
-            onChange={e => setMarkdownValue(e)}
-            beforeMount={handleEditorWillMount}
-          />
+          <MarkdownEditor />
         </div>
         <div className="markup-container">
           <div className="container-header">
@@ -65,26 +41,12 @@ const Home = () => {
               </Button>
             </div>
             <Button
-              onClick={() => copyMarkupToClipboard(htmlValue)}
+              // onClick={() => copyMarkupToClipboard(htmlValue)}
               className="container-header-button">
               <FaCopy style={{ fontSize: "1.2rem" }} />
             </Button>
           </div>
-          <div className="container-markup">
-            {
-              activeTab === "preview" ?
-                <div className="markdown-body" style={{ paddingLeft: "30px" }}>
-                  <Markdown remarkPlugins={remarkGfm}>{markdownValue}</Markdown>
-                </div>
-                :
-                <Editor
-                  language="html"
-                  theme="my-custom-theme"
-                  options={editorConfig}
-                  value={htmlValue}
-                  beforeMount={handleEditorWillMount} />
-            }
-          </div>
+          {activeTab === "preview" ? <MarkdownPreview /> : <HtmlEditor />}
         </div>
       </div>
     </section>

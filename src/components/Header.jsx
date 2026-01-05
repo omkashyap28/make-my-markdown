@@ -1,4 +1,4 @@
-import { FaGithub, FaLightbulb } from "react-icons/fa6";
+import { FaGear, FaGithub } from "react-icons/fa6";
 import Button from './Button';
 
 const Header = () => {
@@ -9,6 +9,10 @@ const Header = () => {
           MakeMyMarkdown
         </h2>
         <div className="flex-gap-1">
+          <label htmlFor="sync-scroll">
+            <input type="checkbox" id="sync-scroll" />
+            Sync-scroll
+          </label>
           <a
             href="https://github.com/omkashyap28/make-my-markdown"
             className="page-links"
@@ -20,7 +24,7 @@ const Header = () => {
       <div>
 
       </div>
-    </header>
+    </header >
   );
 };
 
