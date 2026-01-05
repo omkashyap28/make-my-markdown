@@ -116,12 +116,26 @@ button {
   width: auto;
   padding-inline: 10px;
   letter-spacing: 1px;
-  background-color: var(--editor-background);
+  background-color: transparent;
   color: var(--text-primary);
 }
-.copy-button {
+.container-header-button.active {
+  background-color: var(--editor-background);
+}
+
+.copy-btn {
   position: absolute;
-  right: 1rem;
-  top: 0;
-  padding: 1rem;
+  transform: translate(-50%, -50%);
+  right: .4rem;
+  height: 1.7rem;
+  width: 1.7rem;
+  padding: .2em;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.copy-btn:hover {
+  background-color: #4a4b4d;
+}
+.copy-btn.active {
+  scale: 1.1;
 }

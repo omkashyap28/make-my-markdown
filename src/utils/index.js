@@ -26,3 +26,9 @@ export const handleEditorWillMount = (monaco) => {
     },
   });
 };
+
+export const updateCopyStatus = (fn) => {
+  setTimeout(() => {
+    fn(false);
+  }, 5000);
+};
